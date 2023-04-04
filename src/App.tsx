@@ -7,7 +7,7 @@ function App() {
 
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-green-400">
+    <div className="min-h-screen flex justify-center items-center bg-slate-50">
       <div>
         <TopBar />
       </div>
