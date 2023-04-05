@@ -6,7 +6,7 @@ function TopBar() {
   const iconStyle = "m-3 w-6 h-6"
 
   return (
-    <div className="absolute top-0 left-0 right-0 w-screen grid grid-cols-1 place-items-center border-b-2 border-gray-600">
+    <div className="w-screen grid grid-cols-1 place-items-center border-b-2 border-gray-600">
       <div className="w-screen bg-orange-700" style={{ maxWidth: '1400px' }}>
         <div className="my-2">
           <div className="flex items-center">

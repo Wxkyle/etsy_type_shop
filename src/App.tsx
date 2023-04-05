@@ -7,11 +7,11 @@ function App() {
 
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-slate-50">
-      <div>
+    <div className="min-h-screen flex flex-col bg-slate-50">
+      <div className="flex shrink">
         <TopBar />
       </div>
-      <div>
+      <div className=" flex grow">
         <MainScreen />
       </div>
     </div>
