@@ -20,11 +20,21 @@ function TopBar() {
               <input className="flex w-max grow p-4 bg-transparent"></input>
               <button className="p-2 rounded-r-full hover:bg-yellow-300 border-black">o</button>
             </div>
-            <img src={heart} className={iconStyle}></img>
-            <img src={bell} className={iconStyle}></img>
-            <img src={store} className={iconStyle}></img>
-            <img src={account} className={iconStyle}></img>
-            <img src={cart} className={iconStyle}></img>
+            <button className={iconStyle}>
+              <img src={heart}></img>
+            </button>
+            <button className={iconStyle}>
+              <img src={bell}></img>
+            </button>
+            <button className={iconStyle}>
+              <img src={store}></img>
+            </button>
+            <button className={iconStyle}>
+              <img src={account}></img>
+            </button>
+            <button className={iconStyle}>
+              <img src={cart}></img>
+            </button>
           </div>
         </div>
         <div className="mb-2">
