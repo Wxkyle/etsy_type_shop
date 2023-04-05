@@ -1,4 +1,9 @@
 import Categories from "./Categories";
+import account from '../assets/account.png'
+import bell from '../assets/bell.png'
+import cart from '../assets/cart.png'
+import heart from '../assets/heart.png'
+import store from '../assets/store.png'
 
 
 function TopBar() {
@@ -15,11 +20,11 @@ function TopBar() {
               <input className="flex w-max grow p-4 bg-transparent"></input>
               <button className="p-2 rounded-r-full hover:bg-yellow-300 border-black">o</button>
             </div>
-            <img src="http://www.w3.org/2000/svg" className={iconStyle}></img>
-            <img src="http://www.w3.org/2000/svg" className={iconStyle}></img>
-            <img src="http://www.w3.org/2000/svg" className={iconStyle}></img>
-            <img src="http://www.w3.org/2000/svg" className={iconStyle}></img>
-            <img src="http://www.w3.org/2000/svg" className={iconStyle}></img>
+            <img src={heart} className={iconStyle}></img>
+            <img src={bell} className={iconStyle}></img>
+            <img src={store} className={iconStyle}></img>
+            <img src={account} className={iconStyle}></img>
+            <img src={cart} className={iconStyle}></img>
           </div>
         </div>
         <div className="mb-2">
