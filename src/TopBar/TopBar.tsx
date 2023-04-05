@@ -4,11 +4,14 @@ import bell from '../assets/bell.png'
 import cart from '../assets/cart.png'
 import heart from '../assets/heart.png'
 import store from '../assets/store.png'
+import NotificationIcon from "./NotificationIcon";
 
 
 function TopBar() {
 
   const iconStyle = "m-3 w-6 h-6"
+
+  //make a new component for icons. takes in icon. then make component able to have drop down arrow and notifications.
 
   return (
     <div className="w-screen grid grid-cols-1 place-items-center border-b-2 border-gray-600">
@@ -20,9 +23,7 @@ function TopBar() {
               <input className="flex w-max grow p-4 bg-transparent"></input>
               <button className="p-2 rounded-r-full hover:bg-yellow-300 border-black">o</button>
             </div>
-            <button className={iconStyle}>
-              <img src={heart}></img>
-            </button>
+            <NotificationIcon icon={heart} />
             <button className={iconStyle}>
               <img src={bell}></img>
             </button>
