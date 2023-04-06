@@ -17,7 +17,7 @@ function MainScreen() {
 
     return (
         <div className="bg-red-400 flex grow justify-center" >
-            <div className="flex grow" style={{ maxWidth: '1400px' }}>
+            <div className="flex grow lg:mx-12" style={{ maxWidth: '1400px' }}>
                 {screenSelector()}
             </div>
         </ div>

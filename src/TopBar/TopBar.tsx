@@ -5,45 +5,76 @@ import cart from '../assets/cart.png'
 import heart from '../assets/heart.png'
 import store from '../assets/store.png'
 import NotificationIcon from "./NotificationIcon";
-
+import SearchBar from "./SearchBar";
+import { useAtomValue } from "jotai";
+import { mobileModeSwitch } from "../atoms/Atoms";
 
 function TopBar() {
 
-  const iconStyle = "m-3 w-6 h-6"
+  const mobileMode: boolean = useAtomValue(mobileModeSwitch)
 
-  //make a new component for icons. takes in icon. then make component able to have drop down arrow and notifications.
+  console.log(mobileMode)
 
-  return (
-    <div className="w-screen grid grid-cols-1 place-items-center border-b-2 border-gray-600">
-      <div className="w-screen bg-orange-700" style={{ maxWidth: '1400px' }}>
-        <div className="my-2">
-          <div className="flex items-center">
-            <div className="pr-3">ETSY</div>
-            <div className="flex grow border-2 border-black rounded-full bg-yellow-200">
-              <input className="flex w-max grow p-4 bg-transparent"></input>
-              <button className="p-2 rounded-r-full hover:bg-yellow-300 border-black">o</button>
+
+
+  if (mobileMode) {
+
+    return (
+
+      <div className="flex grow border-b-2 border-gray-400">
+        <div className="lg:mx-12 flex grow justify-center">
+          <div className="flex grow flex-col bg-orange-700" style={{ maxWidth: '1400px' }}>
+            <div className="m-2">
+              <div className="flex grow items-center justify-between">
+                <div>
+                  <div className="pr-3">ETSY</div>
+                </div>
+                <div className="flex flex-row">
+                  <NotificationIcon icon={heart} />
+                  <NotificationIcon icon={bell} />
+                  <NotificationIcon icon={store} />
+                  <NotificationIcon icon={account} />
+                  <NotificationIcon icon={cart} />
+                </div>
+              </div>
             </div>
-            <NotificationIcon icon={heart} />
-            <button className={iconStyle}>
-              <img src={bell}></img>
-            </button>
-            <button className={iconStyle}>
-              <img src={store}></img>
-            </button>
-            <button className={iconStyle}>
-              <img src={account}></img>
-            </button>
-            <button className={iconStyle}>
-              <img src={cart}></img>
-            </button>
+            <div className="mx-2 mb-2">
+              <SearchBar disabled={!mobileMode} />
+            </div>
           </div>
         </div>
-        <div className="mb-2">
-          <Categories />
+      </div >
+    );
+
+  } else {
+
+    return (
+      <div className="flex grow border-b-2 border-gray-400">
+        <div className="lg:mx-12 flex grow justify-center">
+          <div className="flex grow flex-col bg-orange-700" style={{ maxWidth: '1400px' }}>
+            <div className="my-2">
+              <div className="flex grow items-center">
+                <div className="pr-3">ETSY</div>
+                <SearchBar disabled={mobileMode} />
+                <NotificationIcon icon={heart} />
+                <NotificationIcon icon={bell} />
+                <NotificationIcon icon={store} />
+                <NotificationIcon icon={account} />
+                <NotificationIcon icon={cart} />
+              </div>
+            </div>
+            <div className="mb-2">
+              <Categories />
+            </div>
+          </div>
         </div>
-      </div>
-    </div >
-  );
+      </div >
+    );
+
+  }
+
+
+
 }
 
 export default TopBar;

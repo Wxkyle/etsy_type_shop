@@ -18,7 +18,7 @@ function Categories() {
 
     return (
         <div className="bg-orange-800">
-            <div className="flex justify-between" style={{ maxWidth: '1400px' }}>
+            <div className="flex justify-between gap-4" style={{ maxWidth: '1400px' }}>
                 <>
                     {categoriesObject.map((category) => {
                         return (
