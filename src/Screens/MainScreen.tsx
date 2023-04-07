@@ -1,6 +1,7 @@
 import { mainScreenSwitcher } from "../atoms/Atoms";
 import { useAtom } from 'jotai'
 import HomePage from "./HomePage/HomePage";
+import CategoryPage from "./CategoryPage/CategoryPage";
 
 function MainScreen() {
 
@@ -10,6 +11,8 @@ function MainScreen() {
     const screenSelector = () => {
         if (screenSwitcher === 'HomePage') {
             return <HomePage />
+        } else if (screenSwitcher === 'CategoryPage') {
+            return <CategoryPage />
         } else if (screenSwitcher === '') {
             return <div></div>
         }
