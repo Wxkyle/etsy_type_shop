@@ -7,11 +7,11 @@ import store from '../assets/store.png'
 import NotificationIcon from "./NotificationIcon";
 import SearchBar from "./SearchBar";
 import { useAtomValue } from "jotai";
-import { mobileModeSwitch } from "../atoms/Atoms";
+import { mobileModeSwitchAtom } from "../atoms/Atoms";
 
 function TopBar() {
 
-  const mobileMode: boolean = useAtomValue(mobileModeSwitch)
+  const mobileMode: boolean = useAtomValue(mobileModeSwitchAtom)
 
   console.log(mobileMode)
 

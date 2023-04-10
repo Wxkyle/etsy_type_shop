@@ -16,13 +16,15 @@ function Categories() {
         { name: 'Gifts & Gift Cards' }
     ]
 
+
+
     return (
         <div className="bg-orange-800">
             <div className="flex justify-between gap-4" style={{ maxWidth: '1400px' }}>
                 <>
                     {categoriesObject.map((category) => {
                         return (
-                            <div className="text-center">{category.name}</div>
+                            <div onClick={()=>{}} className="text-center">{category.name}</div>
                         )
                     })}
                 </>

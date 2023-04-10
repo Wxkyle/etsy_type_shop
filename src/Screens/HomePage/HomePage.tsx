@@ -1,85 +1,22 @@
-import DisplayAllItems, { StoreProduct } from "../ScreenParts/DisplayAllItems";
+import DisplayAllItems from "../ScreenParts/DisplayAllItems";
 import photo from "../../assets/testPhotos/IMG_1791.jpg"
 import { useAtomValue } from "jotai";
-import { mobileModeSwitch } from "../../atoms/Atoms";
+import { mobileModeSwitchAtom } from "../../atoms/Atoms";
+import testItem from '../../../testProps.json'
+import { ProductProps } from "../SelectedItem/SelectedItemPage";
 
 function HomePage() {
 
-    const mobileMode: boolean = useAtomValue(mobileModeSwitch)
+    const mobileMode: boolean = useAtomValue(mobileModeSwitchAtom)
 
-    const testItems: StoreProduct[] = [
-        {
-            photo: photo,
-            name: 'thing',
-            price: 9.99,
-        },
-        {
-            photo: photo,
-            name: 'thing',
-            price: 9.99,
-        },
-        {
-            photo: photo,
-            name: 'thing',
-            price: 9.99,
-        },
-        {
-            photo: photo,
-            name: 'thing',
-            price: 9.99,
-        },
-        {
-            photo: photo,
-            name: 'thing',
-            price: 9.99,
-        },
-        {
-            photo: photo,
-            name: 'thing',
-            price: 9.99,
-        },
-        {
-            photo: photo,
-            name: 'thing',
-            price: 9.99,
-        },
-        {
-            photo: photo,
-            name: 'thing',
-            price: 9.99,
-        },
-        {
-            photo: photo,
-            name: 'thing',
-            price: 9.99,
-        },
-        {
-            photo: photo,
-            name: 'thing',
-            price: 9.99,
-        },
-        {
-            photo: photo,
-            name: 'thing',
-            price: 9.99,
-        },
-        {
-            photo: photo,
-            name: 'thing',
-            price: 9.99,
-        },
-        {
-            photo: photo,
-            name: 'thing',
-            price: 9.99,
-        },
-    ]
+    const items: ProductProps[] = testItem.multipleItems
+    //date was not provided but will need to be
 
     const isMobile = mobileMode ? " p-2" : ""
 
     return (
         <div className={"bg-yellow-300 flex grow flex-col" + isMobile}>
-            <DisplayAllItems title="Test Things" items={testItems} />
+            <DisplayAllItems items={items} />
         </div>
     );
 }

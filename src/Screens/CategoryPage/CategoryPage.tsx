@@ -1,11 +1,11 @@
 import DisplayAllItems, { StoreProduct } from "../ScreenParts/DisplayAllItems";
 import photo from "../../assets/testPhotos/IMG_1791.jpg"
 import { useAtomValue } from "jotai";
-import { mobileModeSwitch } from "../../atoms/Atoms";
+import { mobileModeSwitchAtom } from "../../atoms/Atoms";
 
 function CategoryPage() {
 
-    const mobileMode: boolean = useAtomValue(mobileModeSwitch)
+    const mobileMode: boolean = useAtomValue(mobileModeSwitchAtom)
 
     const testItems: StoreProduct[] = [
         {

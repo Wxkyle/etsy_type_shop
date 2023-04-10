@@ -1,0 +1,116 @@
+{
+    "testItem": {
+        "id": 123,
+        "name": "Clone",
+        "price": 99.99,
+        "description": "A trooper",
+        "stock": 20,
+        "pictures": [
+            ""
+        ],
+        "reviews": [
+            9,
+            9,
+            9
+        ],
+        "category": "Art"
+    },
+    "multipleItems": [
+        {
+            "id": 123,
+            "name": "Clone",
+            "price": 99.99,
+            "description": "A trooper",
+            "stock": 20,
+            "pictures": [
+                ""
+            ],
+            "reviews": [
+                9,
+                9,
+                9
+            ],
+            "category": "Art"
+        },
+        {
+            "id": 123,
+            "name": "Clone",
+            "price": 99.99,
+            "description": "A trooper",
+            "stock": 20,
+            "pictures": [
+                ""
+            ],
+            "reviews": [
+                9,
+                9,
+                9
+            ],
+            "category": "Art"
+        },
+        {
+            "id": 123,
+            "name": "Clone",
+            "price": 99.99,
+            "description": "A trooper",
+            "stock": 20,
+            "pictures": [
+                ""
+            ],
+            "reviews": [
+                9,
+                9,
+                9
+            ],
+            "category": "Art"
+        },
+        {
+            "id": 123,
+            "name": "Clone",
+            "price": 99.99,
+            "description": "A trooper",
+            "stock": 20,
+            "pictures": [
+                ""
+            ],
+            "reviews": [
+                9,
+                9,
+                9
+            ],
+            "category": "Art"
+        },
+        {
+            "id": 123,
+            "name": "Clone",
+            "price": 99.99,
+            "description": "A trooper",
+            "stock": 20,
+            "pictures": [
+                ""
+            ],
+            "reviews": [
+                9,
+                9,
+                9
+            ],
+            "category": "Art"
+        },
+        {
+            "id": 123,
+            "name": "Clone",
+            "price": 99.99,
+            "description": "A trooper",
+            "stock": 20,
+            "pictures": [
+                ""
+            ],
+            "reviews": [
+                9,
+                9,
+                9
+            ],
+            "category": "Art"
+        }
+    ]
+}

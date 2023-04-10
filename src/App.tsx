@@ -2,10 +2,10 @@ import { useAtom } from "jotai";
 import React, { useEffect } from "react";
 import MainScreen from "./Screens/MainScreen";
 import TopBar from "./TopBar/TopBar";
-import { mobileModeSwitch } from "./atoms/Atoms";
+import { mobileModeSwitchAtom } from "./atoms/Atoms";
 
 function App(): JSX.Element {
-  const [, setMobileModeSwitch] = useAtom(mobileModeSwitch);
+  const [, setMobileModeSwitch] = useAtom(mobileModeSwitchAtom);
 
   useEffect(() => {
     const handleResize = () => {
