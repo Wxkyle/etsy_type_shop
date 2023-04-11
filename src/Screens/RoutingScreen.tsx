@@ -1,18 +1,19 @@
+import { useAtom, useAtomValue } from 'jotai';
 import { mainScreenSwitcherAtom, selectedItemIdAtom } from "../atoms/Atoms";
-import { useAtom, useAtomValue } from 'jotai'
-import HomePage from "./HomePage/HomePage";
 import CategoryPage from "./CategoryPage/CategoryPage";
+import HomePage from "./HomePage/HomePage";
 import SelectedItemPage, { ProductProps } from "./SelectedItem/SelectedItemPage";
 
-import testItem from '../../testProps.json'
 
-function MainScreen() {
+import testItem from '../../testProps.json';
+
+const RoutingScreen: React.FC = () => {
 
     const [screenSwitcher, useScreenSwitcher] = useAtom(mainScreenSwitcherAtom)
     const selectedItem = useAtomValue(selectedItemIdAtom)
 
     const item: ProductProps = testItem.testItem
-    //date was not provided but will need to be
+    // date was not provided but will need to be
 
 
     const screenSelector = () => {
@@ -36,4 +37,4 @@ function MainScreen() {
     );
 }
 
-export default MainScreen;
+export default RoutingScreen;

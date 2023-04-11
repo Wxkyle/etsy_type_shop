@@ -22,9 +22,9 @@ function Categories() {
         <div className="bg-orange-800">
             <div className="flex justify-between gap-4" style={{ maxWidth: '1400px' }}>
                 <>
-                    {categoriesObject.map((category) => {
+                    {categoriesObject.map((category, index) => {
                         return (
-                            <div onClick={()=>{}} className="text-center">{category.name}</div>
+                            <div key={index} onClick={() => { }} className="text-center">{category.name}</div>
                         )
                     })}
                 </>

@@ -13,10 +13,6 @@ function TopBar() {
 
   const mobileMode: boolean = useAtomValue(mobileModeSwitchAtom)
 
-  console.log(mobileMode)
-
-
-
   if (mobileMode) {
 
     return (

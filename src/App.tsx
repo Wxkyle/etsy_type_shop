@@ -1,6 +1,6 @@
 import { useAtom } from "jotai";
-import React, { useEffect } from "react";
-import MainScreen from "./Screens/MainScreen";
+import { useEffect } from "react";
+import RoutingScreen from "./Screens/RoutingScreen";
 import TopBar from "./TopBar/TopBar";
 import { mobileModeSwitchAtom } from "./atoms/Atoms";
 
@@ -28,7 +28,7 @@ function App(): JSX.Element {
         <TopBar />
       </div>
       <div className="flex grow">
-        <MainScreen />
+        <RoutingScreen />
       </div>
     </div>
   );

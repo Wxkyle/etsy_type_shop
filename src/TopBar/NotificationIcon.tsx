@@ -1,5 +1,5 @@
+import { IconButton, Badge, Menu, MenuItem } from '@mui/material';
 import React, { useState } from 'react';
-import { IconButton, Badge, Menu, MenuItem } from '@material-ui/core';
 
 interface NotificationIconProps {
   icon: string;
