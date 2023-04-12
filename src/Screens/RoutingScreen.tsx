@@ -1,5 +1,5 @@
 import { useAtom, useAtomValue } from 'jotai';
-import { mainScreenSwitcherAtom, selectedItemIdAtom } from "../atoms/Atoms";
+import { mainScreenSwitcherAtom, selectedCategoryPageAtom, selectedItemIdAtom } from "../atoms/Atoms";
 import CategoryPage from "./CategoryPage/CategoryPage";
 import HomePage from "./HomePage/HomePage";
 import SelectedItemPage, { ProductProps } from "./SelectedItem/SelectedItemPage";
@@ -11,6 +11,7 @@ const RoutingScreen: React.FC = () => {
 
     const [screenSwitcher, useScreenSwitcher] = useAtom(mainScreenSwitcherAtom)
     const selectedItem = useAtomValue(selectedItemIdAtom)
+    const selectedCategoryPage = useAtomValue(selectedCategoryPageAtom)
 
     const item: ProductProps = testItem.testItem
     // date was not provided but will need to be
@@ -19,7 +20,7 @@ const RoutingScreen: React.FC = () => {
     const screenSelector = () => {
         if (screenSwitcher === 'HomePage') {
             return <HomePage />
-        } else if (screenSwitcher === 'CategoryPage') {
+        } else if (screenSwitcher === selectedCategoryPage) {
             return <CategoryPage />
         } else if (screenSwitcher === selectedItem) {
             return <SelectedItemPage {...item} />

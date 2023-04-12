@@ -1,13 +1,17 @@
-import DisplayAllItems, { StoreProduct } from "../ScreenParts/DisplayAllItems";
+import DisplayAllItems from "../ScreenParts/DisplayAllItems";
 import photo from "../../assets/testPhotos/IMG_1791.jpg"
 import { useAtomValue } from "jotai";
 import { mobileModeSwitchAtom } from "../../atoms/Atoms";
+import { ProductProps } from "../SelectedItem/SelectedItemPage";
 
 function CategoryPage() {
 
     const mobileMode: boolean = useAtomValue(mobileModeSwitchAtom)
 
-    const testItems: StoreProduct[] = [
+    //display all items based on category
+
+    //these need to be changed to product props
+    const testItems: ProductProps[] = [
         {
             photo: photo,
             name: 'thing',
@@ -29,7 +33,7 @@ function CategoryPage() {
 
     return (
         <div className={"bg-yellow-300 flex grow flex-col" + isMobile}>
-            <DisplayAllItems title="Test Things" items={testItems} />
+            <DisplayAllItems items={testItems} />
         </div>
     );
 }
