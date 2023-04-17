@@ -16,6 +16,9 @@ const RoutingScreen: React.FC = () => {
     const item: ProductProps = testItem.testItem
     // date was not provided but will need to be
 
+    //what kind of routing do i need?
+    //what will work?
+
 
     const screenSelector = () => {
         if (screenSwitcher === 'HomePage') {
