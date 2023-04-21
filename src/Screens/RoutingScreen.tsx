@@ -18,6 +18,7 @@ const RoutingScreen: React.FC = () => {
 
     //what kind of routing do i need?
     //what will work?
+    //react routing or what kind of routing?
 
 
     const screenSelector = () => {
